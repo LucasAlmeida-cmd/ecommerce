@@ -5,11 +5,11 @@
 ```mermaid
 classDiagram
     class Pedido {
-        -Cliente cliente
+        -User User
         -List~Produto~ produtos
     }
 
-    class Cliente {
+    class User {
         -Long id
         -String nome
         -String email
@@ -21,6 +21,6 @@ classDiagram
         -Double preco
     }
 
-    Pedido "1" --> "1" Cliente : cliente
+    Pedido "1" --> "1" User : User
     Pedido "1" --> "*" Produto : produtos
 ```
